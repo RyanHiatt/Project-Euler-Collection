@@ -2,11 +2,13 @@ import math
 import numpy as np
 import itertools
 
-"""Project Euler Mathematical Problems
-Problems 1 -
-Accomplished by: Ryan Hiatt
-Start Date: 10/12/2021
-"""
+#######################################
+# Project Euler Mathematical Problems
+# Problems 1 - 20
+# Accomplished by: Ryan Hiatt
+# Start Date: 10/12/2021
+# Completion Date: TBD
+#######################################
 
 # region Problem 1 - Multiples of 3 or 5
 """
@@ -265,11 +267,16 @@ Find the product abc.
 """
 
 
-def pythagorean_triplet(m, n):
+def pythagorean_triplet(goal):
+    triplet_sum = 0
+    m = 2
+    n = 1
 
-    a = m**2 - n**2
-    b = 2 * m * n
-    c = m**2 + n**2
+    while triplet_sum <= goal:
+        a = m**2 - n**2
+        b = 2 * m * n
+        c = m**2 + n**2
+        triplet_sum = a + b + c
 
     return a, b, c
 
